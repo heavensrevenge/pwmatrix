@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  grid-template-columns: 25em 1fr;
+  grid-template-areas: "header outputHeader" "inputContainer result";
+}
+
+.container>div {
+  border: solid;
+  border-width: thin;
+}
+
+.header {
+  grid-area: header;
+}
+
+.outputHeader {
+  grid-area: outputHeader;
+}
+
+.inputContainer {
+  grid-area: inputContainer;
+  padding: 0.2em;
+}
+
+.result {
+  grid-area: result;
+}
+
+#resultHeader, #hmacKey, #timeTaken {
+  padding-right: 5em;
+}
+
+#header, #resultHeader {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.inputText {
+  width: 10em;
+}
+
+.positions {
+  width: 5em;
+}
+
+#storedResult {
+  background-color: lightskyblue;
+}
+
+#storedResultMatched {
+  background-color: lawngreen;
+}
+
+#storedResultError {
+  background-color: red;
+}

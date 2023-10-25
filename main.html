@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Password Matrix</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="header">Password Matrix Input:</div>
+        </div>
+        <div class="outputHeader">
+            <span id="resultHeader">Result:</span>
+            <span id="hmacKey"></span>
+            <span id="timeTaken"></span>
+        </div>
+        <div class="inputContainer">
+            <div id="impliedInputs">
+                <br />
+                <div>Inputs and Positions</div>
+                <div>Position 2,3 means 2 down & 3 over</div>
+                <div>Try not to over-write inputs</div>
+                <br />
+                <div id="domainInput">
+                    <input id="domain" class="inputText" type="text" placeholder="Domain/Key (Hashed)">
+                    <label for="selectAlgorithm">Algorithm:</label>
+                    <select id="selectAlgorithm">
+                        <option value="blake2b">Blake2b</option>
+                        <option value="sha_512">SHA-512</option>
+                        <option value="sha3_512">SHA3-512</option>
+                    </select>
+                </div>
+                <br />
+            </div>
+            <div id="userInputs"></div>
+            <br />
+            <div class="inputButtons">
+                <button id="addInput">Add Input</button>
+                <button id="removeInput">Remove Input</button>
+                <button id="clearInput">Clear Input</button>
+            </div>
+            <br />
+            <button id="showInputMatrix">Show Input Matrix</button>
+            <br /><br />
+            <span>Press "Enter" during input or click here to Show Result</span>
+            <button id="calculateResult">Calculate and Show Result</button>
+            <br /><br />
+            <div>
+                <button id="storeResult">Store Result</button>
+                <button id="compareResult">Compare to Stored Result</button>
+            </div>
+            <br />
+            <div>See <a href="README.md">README</a> for explanation of concept and implementation choices</div>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="passwordMatrix.js"></script>
+    <script src="blake2b.js"></script>
+    <script src="sha.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

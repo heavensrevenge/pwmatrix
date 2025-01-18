@@ -1,5 +1,7 @@
 # Password Matrix (2D Passwords)
 
+![Simple Password Matrix](/Example-picture-intro.png "Just a Simple Password Matrix")
+
 ## High-level Explanation
 
 1. Insert user input like username & passwords into a matrix
@@ -16,7 +18,9 @@ This is a natural evolution of passwords, which simply brings a one-dimensional 
 
 Technically, a 3-dimensional password is also possible, but I didn't care to go that far yet since it is far more complex to understand and thus get adopted.
 
-Instead of simple 16x8 or 24x24 two-dimensional password matrices which are possible too, I go all-out and use a full 64x64 to house the entirety of a 512-bit cryptographic hash function result to make a unique matrix/bit-map which is both strong and reproducible.
+Instead of simple 16x8 or 24x24 two-dimensional password matrices which are possible too, I go all-out and use a full 64x64 (zero based indexing) to house the entirety of a 512-bit cryptographic hash function result on both the vertical and horizontal direction to make a unique matrix/bit-map which is both strong and reproducible.
+
+![Example Password Matrix](/Example-picture-implementation.png "Example Implementation")
 
 ---
 

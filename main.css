@@ -1,0 +1,80 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #ddd;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 26em 1fr;
+  grid-template-areas: "header outputHeader" "inputContainer result";
+}
+
+.container > div {
+  border: solid;
+  border-width: thin;
+}
+
+.header {
+  grid-area: header;
+}
+
+.outputHeader {
+  grid-area: outputHeader;
+}
+
+.inputContainer {
+  grid-area: inputContainer;
+  padding: 0.2em;
+}
+
+.result {
+  grid-area: result;
+}
+
+#resultHeader, #hmacKey, #timeTaken {
+  padding-right: 2em;
+}
+
+#header, #resultHeader {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+}
+
+.inputText {
+  width: 10em;
+}
+
+.positions {
+  width: 5em;
+}
+
+#storedResult {
+  background-color: lightskyblue;
+}
+
+#storedResultMatched {
+  color: #000;
+  background-color: lawngreen;
+}
+
+#storedResultError {
+  color: #000;
+  background-color: red;
+}
+
+.shownPassword {
+  width: 98%;
+}
